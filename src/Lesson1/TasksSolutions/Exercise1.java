@@ -1,4 +1,4 @@
-package TasksSolutions;
+package Lesson1.TasksSolutions;
 
 public class Exercise1 {
     public static void main(String[] args) {

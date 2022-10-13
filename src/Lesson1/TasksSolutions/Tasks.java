@@ -1,4 +1,4 @@
-package TasksSolutions;
+package Lesson1.TasksSolutions;
 
 public class Tasks {
     // 1 Задание
