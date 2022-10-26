@@ -16,6 +16,8 @@ public class Tasks {
      count7(7) → 1
      count7(123) → 0
 
+
+
      2.У нас есть несколько кроликов, и у каждого кролика два больших висячих уха.
      Мы хотим вычислить общее количество ушей у всех кроликов рекурсивно (без циклов или умножения).
 
@@ -32,4 +34,50 @@ bunnyEars(2) → 4
     Выведите все числа от A до B включительно, в порядке возрастания,
     если A < B, или в порядке убывания в противном случае.
      */
+
+    public static int count7(int n){
+        if(n==0){
+            return 0;
+        }
+
+        if(n%10 == 7){
+            return 1 + count7(n/10);
+        }
+        return count7(n/10);
+    }
+
+    public static int bunnyEarsCount(int n){//3
+        if(n==0){
+            return 0;
+        }
+        return 2 + bunnyEarsCount(n-1);
+    }
+
+    public static int sum(int a){
+        if(a<10){
+            return a;
+        }
+        return a%10 + sum(a/10);
+    }
+
+    public static String riseNumber (int a, int b){ // a=5, b = 10
+        if(a==b){
+            return Integer.toString(a);
+        }
+
+        if(a>b) {
+            return a + " " + riseNumber(a - 1, b);
+        }
+        else {
+            return a + " " + riseNumber(a+1,b);
+        }
+
+    }
+    public static void main(String[] args) {
+        System.out.println(count7(717));
+        System.out.println(count7(717421475));
+        System.out.println(bunnyEarsCount(3));
+        System.out.println(riseNumber(5,10));
+        System.out.println(sum(1424));
+    }
 }
